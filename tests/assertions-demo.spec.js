@@ -18,7 +18,7 @@ test.describe('assertions that PASS', () => {
     await expect(page).toHaveTitle(/Playwright/); // true -> passes
   });
 
-  test('hero heading is visible', async ({ page }) => {
+  test('hero is visible', async ({ page }) => {
     await page.goto('/');
     await expect(
       page.getByRole('heading', { level: 1, name: /enables reliable web automation/i }),
