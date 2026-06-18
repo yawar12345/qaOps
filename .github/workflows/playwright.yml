@@ -17,6 +17,10 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - name: Azure Login
+    - uses: azure/login@v3
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v5
